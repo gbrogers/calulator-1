@@ -8,8 +8,8 @@ const reader = readline.createInterface({
 
 
 reader.question("What would you like to calculate?", function(input){
-	let tokens = input.split(' '); // the input being split at every ' ' will go into array tokens --why isn't tokens -> let tokens?
-	
+	tokens = input.split(' '); // the input being split at every ' ' will go into array tokens 
+
 	mathSymbol = tokens[0]; // taking the first index of tokens and assigning to mathSymbols
 	num1 = Number(tokens[1]); // num1 will be the number of string at tokens array 2nd index
 	num2 = Number(tokens[2]); // num1 will be the number of string at tokens array 2nd index
@@ -37,6 +37,18 @@ reader.question("What would you like to calculate?", function(input){
 	} 
 	if (mathSymbol === 'sqrt'){
 		console.log(Math.sqrt(num1));
+	}
+	if (mathSymbol === 'rmdr'){
+		console.log(num1 % num2);
+	}
+	if (mathSymbol === 'pow'){
+		console.log(Math.pow(num1, num2));
+	}
+	if (mathSymbol === 'sq'){
+		console.log(Math.pow(num1, 2));
+	}
+	if (mathSymbol ==='cube'){
+		console.log(Math.pow(num1, 3));
 	}
 
 	// This line closes the connection to the command line interface.
